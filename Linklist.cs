@@ -5,9 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace DataStructureDemo
-{ 
+{
     class CustomLinkedList
     {
+     
         Node head;
 
         public void InsertLast(int new_data)
@@ -33,6 +34,19 @@ namespace DataStructureDemo
                 temp = temp.next;
             }
             return temp;
+        }
+
+        public void InsertFront(int new_data)
+        {
+            Node new_node = new Node(new_data);
+            new_node.next = this.head;
+            this.head = new_node;
+            Console.WriteLine("Inserted into list" + new_node.data);
+        }
+
+        public void Append(int new_data)
+        {
+            InsertLast(new_data);
         }
 
         public void Display()
