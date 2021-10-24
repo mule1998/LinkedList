@@ -9,9 +9,9 @@ namespace DataStructureDemo
 /// </summary>
     class CustomLinkedList
     {/// <summary>
-     /// UC7 search a element in linked list
+     /// UC8 search a element and insert a node after that in linked list
      /// </summary>
-        Node head;
+        public Node head;
 
         //creating method for inserting elements at last
         public void InsertLast(int new_data)
@@ -117,7 +117,7 @@ namespace DataStructureDemo
             return lastDeletedNode;
         }
 
-        //method to find a node in alinked list
+        //method to find a node in a linked list
         public int Search(int value)
         {
             Node temp = this.head;
@@ -133,6 +133,18 @@ namespace DataStructureDemo
             return value;
         }
 
+        //method 
+        public void FindAndInsert(Node exist_node, int new_data)
+        {
+            if (exist_node == null)
+            {
+                Console.WriteLine("This node not exist in list");
+                return;
+            }
+            Node new_node = new Node(new_data);
+            new_node.next = exist_node.next;
+            exist_node.next = new_node;
+        }
         //method for displaying elements in linked list
         public void Display()
         {

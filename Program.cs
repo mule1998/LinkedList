@@ -18,7 +18,10 @@ namespace DataStructureDemo
             customLinkedList.InsertLast(56);
             customLinkedList.InsertLast(30);
             customLinkedList.InsertLast(70);
-            Console.WriteLine(customLinkedList.Search(30));
+            Console.WriteLine("Linked list before insertion:");
+            customLinkedList.Display();
+            customLinkedList.FindAndInsert(customLinkedList.head.next, 40);
+            customLinkedList.Display();
             Console.ReadLine();
         }
     }
