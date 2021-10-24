@@ -9,13 +9,16 @@ namespace DataStructureDemo
     {
         static void Main(string[] args)
         {
-
             CustomLinkedList customLinkedList = new CustomLinkedList();
-            customLinkedList.Append(56);
-            customLinkedList.Append(30);
-            customLinkedList.Append(70);
+            customLinkedList.InsertLast(56);
+            customLinkedList.InsertLast(70);
+            Console.WriteLine("Linked list before insertion:");
             customLinkedList.Display();
-            Console.ReadLine(); 
+            customLinkedList.InsertMid(30);
+            Console.WriteLine("Linked list after insertion:");
+            customLinkedList.Display();
+            Console.ReadLine();
         }
+    }
     }
 }
