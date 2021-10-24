@@ -3,14 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 namespace DataStructureDemo
 {/// <summary>
 /// Template for testing linked list
 /// </summary>
     class CustomLinkedList
     {/// <summary>
-     /// UC5 delete a first element in linked list
+     /// UC7 search a element in linked list
      /// </summary>
         Node head;
 
@@ -116,6 +115,22 @@ namespace DataStructureDemo
             int lastDeletedNode = newNode.next.data;
             newNode.next = null;
             return lastDeletedNode;
+        }
+
+        //method to find a node in alinked list
+        public int Search(int value)
+        {
+            Node temp = this.head;
+            while (temp != null)
+            {
+                if (temp.data == value)
+                {
+                    Console.WriteLine("\nNode is present ");
+                    return value;
+                }
+                temp = temp.next;
+            }
+            return value;
         }
 
         //method for displaying elements in linked list
